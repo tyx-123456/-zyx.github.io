@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>田煜煊 · 学术主页 · 磁共振成像知识图谱</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+    <!-- 添加 vis-network 库 -->
+<script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+<link href="https://unpkg.com/vis-network/styles/vis-network.min.css" rel="stylesheet" type="text/css" />
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">田煜煊 · 磁共振成像</div>
+                <div class="nav-links" id="navLinks">
+                    <a href="#home" class="active">首页</a>
+                    <a href="#about">关于</a>
+                    <a href="#edu">教育背景</a>
+                    <a href="#research">科研经历</a>
+                    <a href="#awards">荣誉</a>
+                    <a href="#practice">社会实践</a>
+                    <a href="#graph">知识图谱</a>
+                    <a href="#contact">联系</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="home" class="hero">
+            <div class="card">
+                <h1 class="glow">田煜煊</h1>
+                <p class="lead">医学影像学本科生 | 天津医科大学</p>
+                <p class="lead">核心兴趣：心血管CTA · AI在胸部X光筛查 · 介入放射学围手术期评估</p>
+
+                <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+                    <div class="stat">电话：15591987872</div>
+                    <div class="stat">邮箱：tianyuxuan_edu@163.com</div>
+                    <div class="stat">地点：天津市</div>
+                </div>
+
+                <div style="margin-top:18px;display:flex;gap:10px">
+                    <button class="btn" onclick="scrollToId('graph')">打开知识图谱</button>
+                    <a class="btn" href="#contact">写邮件联系</a>
+                </div>
+            </div>
+
+            <aside class="card profile">
+                <img class="avatar" src="assets/photo.jpg" alt="个人照片">
+                <div style="text-align:center">
+                    <div class="meta"><strong>田煜煊</strong></div>
+                    <small>天津医科大学 · 医学影像学</small>
+                    <div class="stats" style="margin-top: 1rem;">
+                        <div class="stat">方向：心血管 & AI</div>
+                        <div class="stat">技能：R语言、MR、CTA、PACS</div>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <!-- 关于 -->
+        <section id="about">
+            <div class="card">
+                <h3>关于我</h3>
+                <p class="node-info">医学影像学专业学生，专注于磁共振成像技术与人工智能在医学影像中的应用。具备扎实的医学理论基础和丰富的科研实践经验，致力于推动医学影像技术的创新与发展。</p>
+            </div>
+        </section>
+
+        <!-- 教育背景 -->
+        <section id="edu">
+            <div class="card">
+                <h3>教育背景</h3>
+                <p class="node-info">天津医科大学 | 医学影像学 学士（2022.09 - 2027.07 预计）<br><br>
+                主修课程：内科学、外科学、影像解剖学、核医学、断层解剖学、儿科学<br><br>
+                成绩：专业排名 5 / 31；校级二等奖学金（2024-2025）</p>
+            </div>
+        </section>
+
+        <!-- 科研与项目经历 -->
+        <section id="research">
+            <div class="card">
+                <h3>科研与项目经历</h3>
+                <p class="node-info">· 脑功能成像实验室 | 科研成员（2023.10 - 至今）<br>
+                &nbsp;&nbsp;- 学习并使用 R 语言进行医学数据处理与统计分析<br>
+                &nbsp;&nbsp;- 系统学习孟德尔随机化方法，研究疾病与影像表征的因果关系<br>
+                &nbsp;&nbsp;- 负责文献检索、筛选与归纳，为课题提供理论支持<br><br>
+                
+                · "挑战杯"大学生创新计划竞赛 | 项目负责人（校级三等奖，2025）<br>
+                &nbsp;&nbsp;- 负责项目规划、团队管理与进度推进<br>
+                &nbsp;&nbsp;- 参与算法设计、数据收集与结果分析<br>
+                &nbsp;&nbsp;- 撰写商业计划书并完成答辩<br><br>
+                
+                · "互联网+"大学生创新创业大赛 | 项目负责人（校级铜奖，2025）<br>
+                &nbsp;&nbsp;- 负责项目总体框架设计与实施<br>
+                &nbsp;&nbsp;- 强调创新思维、跨学科整合能力及问题解决能力</p>
+            </div>
+        </section>
+
+        <!-- 荣誉与奖项 -->
+        <section id="awards">
+            <div class="card">
+                <h3>荣誉与奖项</h3>
+                <p class="node-info">· 天津医科大学 PBL撰写大赛 校级一等奖 (2024)<br>
+                · 天津市化学竞赛 三等奖 (2025)<br>
+                · 大学生志愿者暑期"三下乡"社会实践活动 校级二等奖 (2024)<br>
+                · "天医笔记"评选活动 优秀奖 (2024)<br>
+                · 大学英语四级证书</p>
+            </div>
+        </section>
+
+        <!-- 社会实践 -->
+        <section id="practice">
+            <div class="card">
+                <h3>社会实践</h3>
+                <p class="node-info">· 天津市第一中心医院影像科 | 见习生（2024.07 - 2024.08）<br>
+                &nbsp;&nbsp;- 参与日常影像诊断工作，学习CT、MRI等设备的操作流程<br>
+                &nbsp;&nbsp;- 协助医师完成影像报告的初步撰写和整理<br>
+                &nbsp;&nbsp;- 了解PACS系统的临床应用和管理规范<br><br>
+                
+                · 社区医疗志愿服务 | 志愿者（2023.09 - 2024.06）<br>
+                &nbsp;&nbsp;- 参与组织社区健康讲座，普及医学影像知识<br>
+                &nbsp;&nbsp;- 协助居民了解常见疾病的影像学检查方法<br>
+                &nbsp;&nbsp;- 提供基本的医疗咨询和健康指导服务<br><br>
+                
+                · 校园医学知识普及活动 | 组织者（2024.03）<br>
+                &nbsp;&nbsp;- 策划并执行"医学影像科技周"系列活动<br>
+                &nbsp;&nbsp;- 向同学介绍最新的医学影像技术发展<br>
+                &nbsp;&nbsp;- 组织参观学校影像实验室，增强实践认知</p>
+            </div>
+        </section>
+
+        <!-- 知识图谱 -->
+        <section id="graph">
+            <div class="card">
+                <h3>磁共振成像知识图谱</h3>
+                <p class="node-info">基于Web技术构建的磁共振成像专业知识图谱，展示MRI技术原理、临床应用、序列参数等核心概念及其相互关系。点击节点可查看详细信息。</p>
+                
+                <div id="graph-container">
+                    <!-- 知识图谱将在这里渲染 -->
+                </div>
+                
+                <div style="margin-top: 1rem;">
+                    <h4>知识图谱包含的主要概念：</h4>
+                    <p class="node-info">· 物理原理：核磁共振、弛豫时间、磁场强度、拉莫尔频率、化学位移<br>
+                    · 成像序列：T1加权、T2加权、FLAIR、DWI、SWI、MRA、MRV、MRS<br>
+                    · 临床应用：神经系统、心血管系统、肌肉骨骼、腹部成像、乳腺成像<br>
+                    · 技术参数：TR、TE、翻转角、矩阵大小、层厚、FOV、NEX<br>
+                    · 对比剂：钆剂、超顺磁性氧化铁、肝细胞特异性对比剂<br>
+                    · 伪影：运动伪影、磁化率伪影、化学位移伪影、卷褶伪影</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系 -->
+        <section id="contact">
+            <div class="card">
+                <h3>联系我</h3>
+                <p class="node-info">邮箱：tianyuxuan_edu@163.com<br><br>
+                电话：15591987872<br><br>
+                地址：天津市<br><br>
+                欢迎交流医学影像技术、科研合作或实习机会！</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
